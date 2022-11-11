@@ -29,6 +29,9 @@
 .dark-mode h1{
   color: white;
 }
+.dark-mode .note{
+ background-color: rgba(127, 255, 212, 0.821);
+}
 .App {
   display: flex;
   flex-direction: column;
@@ -36,6 +39,7 @@
   max-width: 960px;
   margin: 0 auto;
   padding: 20px 15px;
+  
 }
 
 .header {
@@ -98,6 +102,10 @@ textarea:focus {
   cursor: pointer;
   font-size: 1.3rem;
 }
+.delete-icon:hover{
+  color: red;
+  font-size: 1.5rem;
+}
 .note {
   background-color: aquamarine;
   border-radius: 15px;
@@ -120,10 +128,17 @@ textarea:focus {
   right: 10px;
   position: absolute;
   bottom:1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+
 }
-.save-footer{
+small{
+  margin-right: 3rem;
+}
+.save-btn{
+  background-color: rgb(102, 222, 255);
+  padding: 6px 11px;
+  cursor: pointer;
+}
+.save-btn:hover{
+  background-color: rgb(78, 190, 255);
 
 }
