@@ -3,7 +3,7 @@ import { FiSearch } from "react-icons/fi";
 export default function Search({ handleSearchNote }) {
   return (
     <div className="search">
-      <FiSearch className="search-icon" size="1.3rem" />
+      <FiSearch className="search-icon" />
       <input
         onChange={(event) => handleSearchNote(event.target.value)}
         type="text"

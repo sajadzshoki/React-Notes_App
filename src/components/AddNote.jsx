@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function AddNote({ handleAddNote }) {
+function AddNote({ handleAddNote }) {
   const [noteText, setNoteText] = React.useState("");
   const characterLimit = 200;
 
@@ -11,26 +11,25 @@ export default function AddNote({ handleAddNote }) {
   };
 
   const handleSaveClick = () => {
-    if (noteText.trim().length > characterLimit) {
+    if (noteText.trim().length > 0) {
       handleAddNote(noteText);
       setNoteText("");
     }
   };
   return (
-    <div className="newNote">
+    <div className="note new">
       <textarea
-        cols="35"
-        rows="20"
         placeholder="Add a new note"
         value={noteText}
         onChange={handleLimit}
       ></textarea>
-      <div className="note-footer">
+      <div className="note-footer save-footer">
         <small>{characterLimit - noteText.length} Remaining</small>
-        <button className="save-btn" onClick={handleSaveClick}>
+        <button className="save-btn btn" onClick={handleSaveClick}>
           Save
         </button>
       </div>
     </div>
   );
 }
+export default AddNote;
